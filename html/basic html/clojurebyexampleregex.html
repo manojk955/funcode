@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Include Regex's in clojure</title>
+</head>
+<body>
+<p>
+<ul>
+<h2> Implement regex's in clojure by example </h2>
+<li>Regex's in clojure by example.
+   <ul>
+   <li>Similar to java
+   <li>Contains 4 different constructs
+      <ul>
+	  <li>re-matches -- matches the whole string <br>
+	    user=> (re-matches #"abc" "abcdefg") <br>
+            =>nil<br>
+	   <li> re-find --  search for string concat or regex given in input string (note it only returns first found sub string) <br>
+	       user => (re-find #"s+" "fuss")<br>
+            => "ss"<br>
+			
+	    <li> replace -- As name suggests it replaces the sub strings with given string <br>
+		   user => (clojure.string/replace  "defabcdab" #"ab" "ss")<br>
+		      => "defsscdss"<br>
+			  
+        <li> re-seq --  unlike re-find it finds all required sub strings in given input <br>
+		   user =>(re-seq #"s+" "mississippi") <br>
+                ("ss" "ss") <br>
+	  </ul>
+</ul>
+</ul>
+</p>
+</body>
+</html>
